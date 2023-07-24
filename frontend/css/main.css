@@ -10,7 +10,7 @@ main {
 }
 
 .item-list__img {
-  width: 200px;
+  width: 100px;
   height: 150px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -51,4 +51,5 @@ main {
   border-radius: 30px;
   font-weight: bold;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-decoration: none;
 }
