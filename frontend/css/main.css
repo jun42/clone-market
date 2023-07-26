@@ -1,5 +1,5 @@
 main {
-  padding: 30px 20px 30px 20px;
+  padding: 30px 20px 100px 20px;
 }
 
 .item-list {
@@ -10,12 +10,20 @@ main {
 }
 
 .item-list__img {
-  width: 100px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   margin-right: 50px;
   padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.item-list__img img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: block;
 }
 
 .item-list__info {
@@ -23,7 +31,10 @@ main {
   flex-direction: column;
   justify-content: start;
   height: 200px;
+  width: 80px;
   padding-top: 20px;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .item-list__info-title {
