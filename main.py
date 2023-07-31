@@ -27,6 +27,18 @@ cur.execute(f"""
 
 app = FastAPI()
 
+@app.post('/signup')
+async def signup(id:Annotated[str,Form()],
+                password:Annotated[str,Form()],
+                password2:Annotated[str,Form()],
+                name:Annotated[str,Form()],
+                email:Annotated[str,Form()]):
+    print(id,password,password2, name,email)
+
+    return '200'
+
+
+
 @app.get('/images/{item_id}')
 async def get_image(item_id):
     cur = con.cursor()
