@@ -63,4 +63,34 @@ main {
   font-weight: bold;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   text-decoration: none;
+  transition: all 0.5s;
+}
+
+.write-btn:hover {
+  color: black;
+}
+.write-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.write-btn span:after {
+  background-size: 30px;
+
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.write-btn:hover span {
+  padding-right: 25px;
+}
+
+.write-btn:hover span:after {
+  opacity: 1;
+  right: 0;
 }

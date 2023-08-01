@@ -48,4 +48,28 @@ header {
 
 .menu-bar__icons {
   margin: 0px 4px;
+  display: flex;
+}
+.menu-bar__icons img {
+  cursor: pointer;
+}
+.menu-bar__icons img:hover {
+  transform: scale(1.1);
+}
+
+.bell {
+  position: relative;
+}
+.bell-alarm {
+  height: 10px;
+  width: 10px;
+  background-color: #ff6d00;
+  color: white;
+  font-size: 5px;
+  text-align: center;
+  border: solid #ff6d00 1px;
+  border-radius: 6px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
 }
