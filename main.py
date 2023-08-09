@@ -34,7 +34,12 @@ async def signup(id: Annotated[str, Form()],
                  name: Annotated[str, Form()],
                  email: Annotated[str, Form()]
                  ):
-    print(id, password, password2, name, email)
+
+    cur.execute(f"""INSERT INTO users(id, name, email, password)
+                VALUES('{id}', '{name}','{email}','{password}')
+                """)
+    con.commit()
+    print(id, name, email, password)
     return "200"
 
 

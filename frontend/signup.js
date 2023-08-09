@@ -28,7 +28,11 @@ const handleSignUpForm = async function (event) {
     });
 
     const responseToJson = await res.json();
-    console.log(responseToJson);
+    console.log(responseToJson === "200");
+    if (responseToJson === "200") {
+      console.log(1);
+      window.location.pathname = "/login.html";
+    }
   } else {
     alert("비밀번호가 같지 않습니다.");
   }
