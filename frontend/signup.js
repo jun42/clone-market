@@ -13,12 +13,14 @@ const checkSamePassword = function () {
 };
 
 const handleSignUpForm = async function (event) {
-  // event.preventDefault();
+  event.preventDefault();
   const signUpData = new FormData(form);
   const sha256Password = sha256(signUpData.get("password"));
   signUpData.set("password", sha256Password);
-  console.log(signUpData);
-  console.log(checkSamePassword());
+
+  const sha256Password2 = sha256(signUpData.get("password2"));
+  signUpData.set("password2", sha256Password2);
+
   if (checkSamePassword()) {
     const res = await fetch("/signup", {
       method: "POST",
